@@ -6,10 +6,10 @@
     <title>Upload Video</title>
 </head>
 <body>
-    <h2>Upload a Video</h2>
-    <form action="/api/upload/" method="post" enctype="multipart/form-data">
+    <h1>Upload a New Video</h1>
+    <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="file" name="video" required>
+        <input type="file" name="video">
         <button type="submit">Upload</button>
     </form>
 </body>
